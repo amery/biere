@@ -7,7 +7,8 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix .",
     "format": "prettier . --write",
-    "build": "pnpm -r prepack"
+    "prepare": "pnpm -r dev:prepare",
+    "build": "pnpm -r prepack && pnpm -r build"
   },
   "dependencies": {
     "vue": "^3.2.45"
