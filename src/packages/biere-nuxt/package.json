@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue --fix src",
+    "lint": "eslint --ext .js,.ts,.vue --fix .",
     "format": "prettier . --write",
     "prepack": "nuxt-module-build",
     "dev": "nuxi dev playground",

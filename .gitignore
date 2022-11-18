@@ -2,6 +2,7 @@ node_modules
 dist
 
 # Nuxt
+.output
 .nuxt
 
 # Editor directories and files

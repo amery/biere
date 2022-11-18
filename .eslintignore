@@ -4,4 +4,5 @@ dist
 pnpm-lock.yaml
 
 # Nuxt
+.output
 .nuxt

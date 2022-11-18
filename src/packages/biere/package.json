@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue --fix src",
+    "lint": "eslint --ext .js,.ts,.vue --fix .",
     "format": "prettier . --write",
     "dev": "vite",
     "build": "vue-tsc && vite build",
