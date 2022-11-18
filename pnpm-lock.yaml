@@ -39,12 +39,14 @@ importers:
 
   src/packages/biere:
     specifiers:
+      '@material/material-color-utilities': ^0.2.0
       '@vitejs/plugin-vue': ^3.2.0
       typescript: 4.8.4
       vite: ^3.2.4
       vue: ^3.2.45
       vue-tsc: ^1.0.9
     dependencies:
+      '@material/material-color-utilities': 0.2.0
       vue: 3.2.45
     devDependencies:
       '@vitejs/plugin-vue': 3.2.0_vite@3.2.4+vue@3.2.45
@@ -488,6 +490,10 @@ packages:
       - encoding
       - supports-color
     dev: true
+
+  /@material/material-color-utilities/0.2.0:
+    resolution: {integrity: sha512-Wux17VAe27abfUyA+yPq/xN7+e6xkj1UFKd9g02KD0HhpM+GRqXLfytJ6nJKhFtliZouQfTcBcOg2cGrt/XbKA==}
+    dev: false
 
   /@netlify/functions/1.3.0:
     resolution: {integrity: sha512-hN/Fgpz8XIOBfsBPLYUMxVKBlCopgeqGB0popayicnmkFLnvKByTTMYgF01wcF9DBtBQdV0H2h1kPFpMl34I8w==}
