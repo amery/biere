@@ -12,6 +12,7 @@ importers:
       eslint: ^8.27.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.2.1
+      eslint-plugin-ssr-friendly: ^1.0.6
       eslint-plugin-vue: ^9.7.0
       prettier: ^2.7.1
       typescript: 4.8.4
@@ -30,6 +31,7 @@ importers:
       eslint: 8.27.0
       eslint-config-prettier: 8.5.0_eslint@8.27.0
       eslint-plugin-prettier: 4.2.1_v7o5sx5x3wbs57ifz6wc4f76we
+      eslint-plugin-ssr-friendly: 1.0.6_eslint@8.27.0
       eslint-plugin-vue: 9.7.0_eslint@8.27.0
       prettier: 2.7.1
       typescript: 4.8.4
@@ -2783,6 +2785,15 @@ packages:
       eslint: ^7.0.0 || ^8.0.0
     dependencies:
       eslint: 8.27.0
+    dev: true
+
+  /eslint-plugin-ssr-friendly/1.0.6_eslint@8.27.0:
+    resolution: {integrity: sha512-O1S/0Q8FYTl1c4vwIr0cg59u37mL5qe7sxpMzjdIo2v8l0LjCugU699trmkgOheQINTq7R9yhfCo6YaAb4tYUQ==}
+    peerDependencies:
+      eslint: '>=0.8.0'
+    dependencies:
+      eslint: 8.27.0
+      globals: 13.18.0
     dev: true
 
   /eslint-plugin-unicorn/44.0.2_eslint@8.27.0:

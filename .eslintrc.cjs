@@ -11,10 +11,12 @@ module.exports = {
 		"plugin:vue/vue3-recommended",
 		"@nuxtjs/eslint-config-typescript",
 		"prettier",
+		"plugin:ssr-friendly/recommended",
 	],
 	plugins: [
 		//
 		"@typescript-eslint",
+		"ssr-friendly",
 		"prettier",
 	],
 	rules: {
