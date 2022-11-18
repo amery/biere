@@ -9,6 +9,7 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:vue/strongly-recommended",
 		"plugin:vue/vue3-recommended",
+		"@nuxtjs/eslint-config-typescript",
 		"prettier",
 	],
 	plugins: [
@@ -20,5 +21,9 @@ module.exports = {
 		// override/add rules settings here, such as:
 		// 'vue/no-unused-vars': 'error'
 		"vue/no-multiple-template-root": "off",
+
+		// allow console and debugger on development
+		"no-console": process.env.NODE_ENV === "production" ? "error" : "warn",
+		"no-debugger": process.env.NODE_ENV === "production" ? "error" : "warn",
 	},
 };
