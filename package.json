@@ -1,21 +1,19 @@
 {
-  "name": "@biere",
+  "name": "biere",
   "author": "Alejandro Mery <amery@jpi.io>",
   "license": "MIT",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue --fix src",
+    "lint": "eslint --ext .js,.ts,.vue --fix .",
     "format": "prettier . --write",
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "pnpm -r prepack"
   },
   "dependencies": {
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "@vitejs/plugin-vue": "^3.2.0",
