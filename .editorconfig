@@ -14,6 +14,10 @@ trim_trailing_whitespace = false
 indent_style = space
 indent_size = 2
 
-[{package.json,pnpm-*.yaml,.vscode/*.json}]
+[package.json]
+indent_style = space
+indent_size = 2
+
+[{pnpm-*.yaml,.vscode/*.json}]
 indent_style = space
 indent_size = 2
