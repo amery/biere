@@ -1,6 +1,9 @@
 node_modules
 dist
 
+# Nuxt
+.nuxt
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
