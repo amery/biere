@@ -3,10 +3,12 @@ import {
 	themeFromImage,
 	themeFromSourceColor,
 	CustomColor as MaterialCustomColor,
-	Theme,
+	Theme as MaterialTheme,
 } from "@material/material-color-utilities";
 
 type HEX = `#${string}`;
+
+export { MaterialTheme, MaterialCustomColor };
 
 export const useMaterialCustomColor = (
 	name: string,
@@ -31,7 +33,7 @@ export const useMaterialCustomColor = (
 export const useMaterialTheme = (
 	source: number | HEX,
 	customColors: MaterialCustomColor[] = []
-): Theme => {
+): MaterialTheme => {
 	let src: number;
 
 	if (typeof source === "number") {
@@ -46,6 +48,6 @@ export const useMaterialTheme = (
 export const useMaterialThemeFromImage = async (
 	image: HTMLImageElement,
 	customColors: MaterialCustomColor[] = []
-): Promise<Theme> => {
+): Promise<MaterialTheme> => {
 	return await themeFromImage(image, customColors);
 };
