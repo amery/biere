@@ -8,6 +8,14 @@ import {
 
 type HEX = `#${string}`;
 
+const asARGB = (value: number | HEX): number => {
+	if (typeof value === "number") {
+		return value
+	}
+
+	return argbFromHex(value);
+}
+
 export { MaterialTheme, MaterialCustomColor };
 
 export const useMaterialCustomColor = (
@@ -15,13 +23,7 @@ export const useMaterialCustomColor = (
 	value: number | HEX,
 	blend = false
 ): MaterialCustomColor => {
-	let v: number;
-
-	if (typeof value === "number") {
-		v = value;
-	} else {
-		v = argbFromHex(value);
-	}
+	const v: number = asARGB(value);
 
 	return {
 		name,
@@ -34,13 +36,7 @@ export const useMaterialTheme = (
 	source: number | HEX,
 	customColors: MaterialCustomColor[] = []
 ): MaterialTheme => {
-	let src: number;
-
-	if (typeof source === "number") {
-		src = source;
-	} else {
-		src = argbFromHex(source);
-	}
+	const src: number = asARGB(source);
 
 	return themeFromSourceColor(src, customColors);
 };
