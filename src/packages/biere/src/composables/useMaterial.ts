@@ -16,7 +16,7 @@ const asARGB = (value: number | HEX): number => {
 	return argbFromHex(value);
 }
 
-export { MaterialTheme, MaterialCustomColor };
+export type { MaterialTheme, MaterialCustomColor };
 
 export const useMaterialCustomColor = (
 	name: string,
