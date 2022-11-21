@@ -21,6 +21,7 @@
     "@vue/eslint-config-typescript": "^11.0.2",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-mdx": "^2.0.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-ssr-friendly": "^1.0.6",
     "eslint-plugin-vue": "^9.7.0",

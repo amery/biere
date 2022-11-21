@@ -19,6 +19,12 @@ module.exports = {
 		"ssr-friendly",
 		"prettier",
 	],
+	overrides: [
+		{
+			files: ["*.mdx"],
+			extends: "plugin:mdx/recommended",
+		},
+	],
 	rules: {
 		// override/add rules settings here, such as:
 		// 'vue/no-unused-vars': 'error'
