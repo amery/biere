@@ -13,6 +13,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@biere/scss": "link:../biere-scss",
     "@material/material-color-utilities": "^0.2.0",
     "vue": "^3.2.45"
   },

@@ -1,0 +1,27 @@
+{
+  "name": "@biere/scss",
+  "type": "module",
+  "version": "0.0.0",
+  "license": "MIT",
+  "style": "./src/main.scss",
+  "css": "./dist/main.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint:style": "stylelint --fix \"**/*.scss\"",
+    "lint:ts": "eslint --ext .js,.ts --fix .",
+    "lint": "run-s lint:*",
+    "format": "prettier --write .",
+    "dev:prepare": "unbuild --stub",
+    "prepack": "unbuild"
+  },
+  "devDependencies": {
+    "rollup-plugin-scss": "^4.0.0",
+    "unbuild": "^1.0.1"
+  },
+  "dependencies": {
+    "@biere/normalize-scss": "^7.0.1",
+    "beercss": "^2.3.0"
+  }
+}
