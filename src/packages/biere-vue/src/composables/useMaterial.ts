@@ -10,11 +10,11 @@ type HEX = `#${string}`;
 
 const asARGB = (value: number | HEX): number => {
 	if (typeof value === "number") {
-		return value
+		return value;
 	}
 
 	return argbFromHex(value);
-}
+};
 
 export type { MaterialTheme, MaterialCustomColor };
 
