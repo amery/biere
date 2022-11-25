@@ -1,6 +1,4 @@
 export default {
-	entries: [
-		"./src/composables"
-	],
+	entries: ["./src/composables"],
 	declaration: true,
 };
