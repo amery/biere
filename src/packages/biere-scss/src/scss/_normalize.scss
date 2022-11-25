@@ -1,1 +1,3 @@
-@import "@biere/normalize-scss/sass/normalize/import-now";
+@import "@biere/normalize-scss/sass/normalize/vertical-rhythm";
+@import "@biere/normalize-scss/sass/normalize/normalize-mixin";
+@include normalize();
