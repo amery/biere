@@ -5,7 +5,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue --fix .",
+    "lint:root": "eslint --fix .*.js .*.cjs --no-ignore",
+    "lint:sub": "pnpm -r lint",
+    "lint": "run-p lint:*",
     "format": "prettier . --write",
     "prepare": "pnpm -r dev:prepare",
     "build": "pnpm -r prepack && pnpm -r build"
