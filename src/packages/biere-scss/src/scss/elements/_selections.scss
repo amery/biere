@@ -1,0 +1,200 @@
+/* checkbox, radio and switch */
+.checkbox,
+.radio,
+.switch {
+  width: auto;
+  height: auto;
+  line-height: normal;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox > input,
+.radio > input {
+  width: 24rem;
+  height: 24rem;
+  opacity: 0;
+}
+
+.checkbox > span,
+.radio > span,
+.switch > span {
+  display: inline-flex;
+  align-items: center;
+  color: var(--on-background);
+  font-size: 14rem;
+}
+
+.checkbox > span:not(:empty),
+.radio > span:not(:empty) {
+  padding-left: 4rem;
+}
+
+.checkbox > input + span::before,
+.radio > input + span::before,
+.switch > input + span:empty::after,
+.switch > input + span > i {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  width: 24rem;
+  height: 24rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  outline: none;
+  color: var(--primary);
+  position: absolute;
+  left: -24rem;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.checkbox > input + span::before {
+  content: "check_box_outline_blank";
+}
+
+.radio > input + span::before {
+  content: "radio_button_unchecked";
+}
+
+.checkbox > input:not([disabled]):focus + span::before,
+.checkbox > input:not([disabled]):hover + span::before,
+.radio > input:not([disabled]):focus + span::before,
+.radio > input:not([disabled]):hover + span::before {
+  background-color: var(--active);
+  box-shadow: 0 0 0 8rem var(--active);
+  animation: var(--speed1) to-checked ease-out;
+}
+
+.checkbox > input:checked + span::before {
+  color: var(--primary);
+  content: "check_box";
+  font-variation-settings: 'FILL' 1;
+}
+
+.radio > input:checked + span::before {
+  color: var(--primary);
+  content: "radio_button_checked";
+}
+
+.checkbox + .checkbox,
+.radio + .radio,
+.switch + .switch {
+  margin-left: 8rem;
+}
+
+.switch > input {
+  width: 52rem;
+  height: 32rem;
+  opacity: 0;
+}
+
+.switch > input + span::before {
+  content: "";
+  position:absolute;
+  left: 0;
+  top: 50%;
+  background-color: var(--active);
+  border: 2rem solid var(--outline);
+  box-sizing: border-box;
+  width: 52rem;
+  height: 32rem;
+  border-radius: 32rem;
+  transform: translate(-52rem, -50%);
+}
+
+.switch > input:checked + span::before {
+  border: none;
+  background-color: var(--primary);
+}
+
+.switch > input + span:empty::after,
+.switch > input + span > i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--speed2) all;
+  font-size: 16rem;
+  user-select: none;
+  min-width: auto;
+  content: "";
+  color: var(--surface-variant);
+  background-color: var(--outline);
+  transform: translate(-48rem, -50%) scale(0.6);
+}
+
+.switch > input:checked + span:empty::after,
+.switch > input:checked + span > i {
+  content: "check";
+  color: var(--primary);
+  background-color: var(--on-primary);
+  transform: translate(-28rem, -50%) scale(1);
+}
+
+.switch > input + span > i {
+  transform: translate(-48rem, -50%) scale(1);
+}
+
+.switch > input + span > i:last-child,
+.switch > input:checked + span > i:first-child {
+  opacity: 0;
+}
+
+.switch > input:checked + span > i:last-child,
+.switch > input + span > i:first-child {
+  opacity: 1;
+}
+
+.switch > input:not([disabled]):focus + span:empty::after,
+.switch > input:not([disabled]):hover + span:empty::after,
+.switch > input:not([disabled]):focus + span > i,
+.switch > input:not([disabled]):hover + span > i {
+  box-shadow: 0 0 0 8rem var(--active);
+}
+
+.checkbox > input:disabled + span,
+.radio > input:disabled + span,
+.switch > input:disabled + span {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.field > nav,
+.field > .row {
+  flex-grow: 1;
+  padding: 0 16rem;
+}
+
+.field.round > nav,
+.field.round > .row {
+  flex-grow: 1;
+  padding: 0 24rem;
+}
+
+@keyframes to-checked {
+  from {
+    box-shadow: 0 0 0 0 var(--active);
+  }
+  to {
+    box-shadow: 0 0 0 8rem var(--active);
+  }
+}

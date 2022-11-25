@@ -1,0 +1,254 @@
+nav,
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  border-radius: 0;
+  gap: 16rem;
+}
+
+*:not(.divider, .small-divider, .medium-divider, .large-divider) + nav:not(.left, .right, .top, .bottom),
+*:not(.divider, .small-divider, .medium-divider, .large-divider) + .row:not(a) {
+  margin-top: 16rem;
+}
+
+nav *,
+.row * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav > *,
+.row > * {
+  margin: 0 !important;
+  white-space: normal;
+  flex: none;
+}
+
+nav.no-space,
+.row.no-space {
+  gap: 0rem;
+}
+
+nav.no-space > .border + .border,
+.row.no-space > .border + .border {
+  border-left: 0;
+}
+
+nav.medium-space,
+.row.medium-space {
+  gap: 24rem;
+}
+
+nav.large-space,
+.row.large-space {
+  gap: 32rem;
+}
+
+nav > .max,
+.row > .max {
+  flex: auto;
+}
+
+nav.wrap,
+.row.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header > nav,
+header > .row {
+  min-height: 64rem;
+}
+
+footer > nav,
+footer > .row {
+  min-height: 80rem;
+}
+
+nav > .border.no-margin + .border.no-margin,
+.row > .border.no-margin + .border.no-margin {
+  border-left: 0;
+}
+
+nav.left,
+nav.right,
+nav.top,
+nav.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 0;
+  position: fixed;
+  color: var(--on-surface);
+  background-color: var(--surface);
+  transform: none;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  text-align: center;
+  padding: 8rem;
+}
+
+nav.left,
+nav.right {
+  width: 80rem;
+}
+
+nav.top,
+nav.bottom {
+  height: 80rem;
+}
+
+nav.top {
+  bottom: auto;
+  justify-content: center;
+  flex-direction: row;
+}
+
+nav.left {
+  right: auto;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+nav.right {
+  left: auto;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+nav.bottom {
+  top: auto;
+  justify-content: center;
+  flex-direction: row;
+}
+
+nav.left > a:not(button, .button, .chip, img, video),
+nav.right > a:not(button, .button, .chip, img, video),
+nav.top > a:not(button, .button, .chip, img, video),
+nav.bottom > a:not(button, .button, .chip, img, video) {
+  min-width: 56rem;
+  min-height: 56rem;
+  text-align: center;
+  display: flex;
+  z-index: 101;
+  flex-direction: column;
+}
+
+nav.left > a:not(button, .button, .chip, img, video),
+nav.right > a:not(button, .button, .chip, img, video) {
+  width: auto;
+}
+
+nav.top > a:not(button, .button, .chip, img, video),
+nav.bottom > a:not(button, .button, .chip, img, video) {
+  height: auto;
+  width: 56rem;
+}
+
+nav.left:before,
+nav.right:before,
+nav.top:before,
+nav.bottom:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: inherit;
+  z-index: 101;
+  border-radius: inherit;
+}
+
+nav.left > :not(.modal, .overlay),
+nav.right > :not(.modal, .overlay),
+nav.top > :not(.modal, .overlay),
+nav.bottom > :not(.modal, .overlay) {
+  z-index: 101;  
+}
+
+nav.left > a:not(button, .button, .chip) > i,
+nav.right > a:not(button, .button, .chip) > i,
+nav.top > a:not(button, .button, .chip) > i,
+nav.bottom > a:not(button, .button, .chip) > i {
+  padding: 4rem;
+  border-radius: 32rem;
+  transition: var(--speed1) padding linear;
+  margin: 0 auto;
+}
+
+nav.left > a:not(button, .button, .chip):hover > i,
+nav.left > a:not(button, .button, .chip):focus > i,
+nav.left > a:not(button, .button, .chip).active > i,
+nav.right > a:not(button, .button, .chip):hover > i,
+nav.right > a:not(button, .button, .chip):focus > i,
+nav.right > a:not(button, .button, .chip).active > i,
+nav.top > a:not(button, .button, .chip):hover > i,
+nav.top > a:not(button, .button, .chip):focus > i,
+nav.top > a:not(button, .button, .chip).active > i,
+nav.bottom > a:not(button, .button, .chip):focus > i,
+nav.bottom > a:not(button, .button, .chip):hover > i,
+nav.bottom > a:not(button, .button, .chip).active > i {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  padding: 4rem 16rem;
+  font-variation-settings: 'FILL' 1;
+}
+
+nav.left > .modal {
+  padding-left: 88rem;
+}
+
+nav.right > .modal {
+  padding-right: 88rem;
+}
+
+nav.top > .modal {
+  padding-top: 88rem;
+}
+
+nav.bottom > .modal {
+  padding-bottom: 88rem;
+}
+
+nav.left-align,
+nav.top-align {
+  justify-content: flex-start;
+}
+
+nav.right-align,
+nav.bottom-align {
+  justify-content: flex-end;
+}
+
+nav.center-align,
+nav.middle-align {
+  justify-content: center;
+}
+
+nav:not(.left, .right) > .space {
+  width: 8rem;
+}
+
+nav:not(.left, .right) > .medium-space {
+  width: 16rem;
+}
+
+nav:not(.left, .right) > .large-space {
+  width: 24rem;
+}
+
+@media only screen and (max-width: 600px) {
+  nav.top,
+  nav.bottom {
+    justify-content: space-around;
+  }
+}
