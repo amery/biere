@@ -36,3 +36,77 @@ $indent-amount: 40px !default;
 // However, changing any of the variables above will cause
 // $normalize-vertical-rhythm to be automatically set to true.
 $normalize-vertical-rhythm: false !default;
+
+// containers elevation
+$elevate1: 0 2rem 2rem 0 rgb(0 0 0 / 14%), 0 1rem 5rem 0 rgb(0 0 0 / 12%),
+  0 3rem 1rem -2rem rgb(0 0 0 / 20%) !default;
+$elevate2: 0 6rem 10rem 0 rgb(0 0 0 / 14%), 0 1rem 18rem 0 rgb(0 0 0 / 12%),
+  0 3rem 5rem -1rem rgb(0 0 0 / 30%) !default;
+$elevate3: 0 10rem 16rem 0 rgb(0 0 0 / 14%), 0 1rem 31rem 0 rgb(0 0 0 / 12%),
+  0 3rem 9rem 0 rgb(0 0 0 / 40%) !default;
+
+// transition speeds
+$speed1: 0.1s !default;
+$speed2: 0.2s !default;
+$speed3: 0.3s !default;
+$speed4: 0.4s !default;
+
+// default light theme
+$primary-light: #6750a4 !default;
+$on-primary-light: #fff !default;
+$primary-container-light: #eaddff !default;
+$on-primary-container-light: #21005e !default;
+$secondary-light: #625b71 !default;
+$on-secondary-light: #fff !default;
+$secondary-container-light: #e8def8 !default;
+$on-secondary-container-light: #1e192b !default;
+$tertiary-light: #7d5260 !default;
+$on-tertiary-light: #fff !default;
+$tertiary-container-light: #ffd8e4 !default;
+$on-tertiary-container-light: #370b1e !default;
+$error-light: #b3261e !default;
+$on-error-light: #fff !default;
+$error-container-light: #f9dedc !default;
+$on-error-container-light: #370b1e !default;
+$background-light: #fffbfe !default;
+$on-background-light: #1c1b1f !default;
+$surface-light: #fffbfe !default;
+$on-surface-light: #1c1b1f !default;
+$outline-light: #79747e !default;
+$surface-variant-light: #e7e0ec !default;
+$on-surface-variant-light: #49454e !default;
+$inverse-surface-light: #313033 !default;
+$inverse-on-surface-light: #f4eff4 !default;
+$body-light: #fff !default;
+$overlay-light: rgb(0 0 0 / 50%) !default;
+$active-light: rgb(0 0 0 / 10%) !default;
+
+// default dark theme
+$primary-dark: #d0bcff !default;
+$on-primary-dark: #371e73 !default;
+$primary-container-dark: #4f378b !default;
+$on-primary-container-dark: #eaddff !default;
+$secondary-dark: #ccc2dc !default;
+$on-secondary-dark: #332d41 !default;
+$secondary-container-dark: #4a4458 !default;
+$on-secondary-container-dark: #e8def8 !default;
+$tertiary-dark: #efb8c8 !default;
+$on-tertiary-dark: #492532 !default;
+$tertiary-container-dark: #633b48 !default;
+$on-tertiary-container-dark: #ffd8e4 !default;
+$error-dark: #f2b8b5 !default;
+$on-error-dark: #601410 !default;
+$error-container-dark: #8c1d18 !default;
+$on-error-container-dark: #f9dedc !default;
+$background-dark: #1c1b1f !default;
+$on-background-dark: #e6e1e5 !default;
+$surface-dark: #1c1b1f !default;
+$on-surface-dark: #e6e1e5 !default;
+$outline-dark: #938f99 !default;
+$surface-variant-dark: #49454f !default;
+$on-surface-variant-dark: #cac4d0 !default;
+$inverse-surface-dark: #e6e1e5 !default;
+$inverse-on-surface-dark: #313033 !default;
+$body-dark: #000 !default;
+$overlay-dark: rgb(0 0 0 / 50%) !default;
+$active-dark: rgb(255 255 255 / 20%) !default;

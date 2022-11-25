@@ -1,0 +1,90 @@
+$global-variables: (
+  "elevate1": $elevate1,
+  "elevate2": $elevate2,
+  "elevate3": $elevate3,
+  "size": 1px,
+  "speed1": $speed1,
+  "speed2": $speed2,
+  "speed3": $speed3,
+  "speed4": $speed4,
+);
+$light-theme-variables: (
+  "body": $body-light,
+  "overlay": $overlay-light,
+  "active": $active-light,
+  "primary": $primary-light,
+  "on-primary": $on-primary-light,
+  "primary-container": $primary-container-light,
+  "on-primary-container": $on-primary-container-light,
+  "secondary": $secondary-light,
+  "on-secondary": $on-secondary-light,
+  "secondary-container": $secondary-container-light,
+  "on-secondary-container": $on-secondary-container-light,
+  "tertiary": $tertiary-light,
+  "on-tertiary": $on-tertiary-light,
+  "tertiary-container": $tertiary-container-light,
+  "on-tertiary-container": $on-tertiary-container-light,
+  "error": $error-light,
+  "on-error": $on-error-light,
+  "error-container": $error-container-light,
+  "on-error-container": $on-error-container-light,
+  "background": $background-light,
+  "on-background": $on-background-light,
+  "surface": $surface-light,
+  "on-surface": $on-surface-light,
+  "outline": $outline-light,
+  "surface-variant": $surface-variant-light,
+  "on-surface-variant": $on-surface-variant-light,
+  "inverse-surface": $inverse-surface-light,
+  "inverse-on-surface": $inverse-on-surface-light,
+);
+$dark-theme-variables: (
+  "body": $body-dark,
+  "overlay": $overlay-dark,
+  "active": $active-dark,
+  "primary": $primary-dark,
+  "on-primary": $on-primary-dark,
+  "primary-container": $primary-container-dark,
+  "on-primary-container": $on-primary-container-dark,
+  "secondary": $secondary-dark,
+  "on-secondary": $on-secondary-dark,
+  "secondary-container": $secondary-container-dark,
+  "on-secondary-container": $on-secondary-container-dark,
+  "tertiary": $tertiary-dark,
+  "on-tertiary": $on-tertiary-dark,
+  "tertiary-container": $tertiary-container-dark,
+  "on-tertiary-container": $on-tertiary-container-dark,
+  "error": $error-dark,
+  "on-error": $on-error-dark,
+  "error-container": $error-container-dark,
+  "on-error-container": $on-error-container-dark,
+  "background": $background-dark,
+  "on-background": $on-background-dark,
+  "surface": $surface-dark,
+  "on-surface": $on-surface-dark,
+  "outline": $outline-dark,
+  "surface-variant": $surface-variant-dark,
+  "on-surface-variant": $on-surface-variant-dark,
+  "inverse-surface": $inverse-surface-dark,
+  "inverse-on-surface": $inverse-on-surface-dark,
+);
+
+/*! beercss | MIT License | beercss.com */
+:root,
+body.light {
+  @each $key, $value in $light-theme-variables {
+    --#{$key}: #{$value};
+  }
+  @each $key, $value in $global-variables {
+    --#{$key}: #{$value};
+  }
+}
+
+body.dark {
+  @each $key, $value in $dark-theme-variables {
+    --#{$key}: #{$value};
+  }
+  @each $key, $value in $global-variables {
+    --#{$key}: #{$value};
+  }
+}
