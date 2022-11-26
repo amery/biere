@@ -12,6 +12,8 @@ $light-theme-variables: (
   "body": $body-light,
   "overlay": $overlay-light,
   "active": $active-light,
+);
+$light-theme-md-variables: (
   "primary": $primary-light,
   "on-primary": $on-primary-light,
   "primary-container": $primary-container-light,
@@ -42,6 +44,8 @@ $dark-theme-variables: (
   "body": $body-dark,
   "overlay": $overlay-dark,
   "active": $active-dark,
+);
+$dark-theme-md-variables: (
   "primary": $primary-dark,
   "on-primary": $on-primary-dark,
   "primary-container": $primary-container-dark,
@@ -70,21 +74,45 @@ $dark-theme-variables: (
 );
 
 /*! beercss | MIT License | beercss.com */
-:root,
-body.light {
-  @each $key, $value in $light-theme-variables {
-    --#{$key}: #{$value};
-  }
+:root {
+  /*! global variables */
   @each $key, $value in $global-variables {
     --#{$key}: #{$value};
+  }
+
+  /*! light theme variables */
+  @each $key, $value in $light-theme-variables {
+    --#{$key}-light: #{$value};
+  }
+  @each $key, $value in $light-theme-md-variables {
+    --md-sys-color-#{$key}-light: #{$value};
+  }
+
+  /*! dark theme variables */
+  @each $key, $value in $dark-theme-variables {
+    --#{$key}-dark: #{$value};
+  }
+  @each $key, $value in $dark-theme-md-variables {
+    --md-sys-color-#{$key}-dark: #{$value};
+  }
+}
+
+body {
+  /*! light theme by default */
+  @each $key, $_value in $light-theme-variables {
+    --#{$key}: var(--#{$key}-light);
+  }
+  @each $key, $_value in $light-theme-md-variables {
+    --#{$key}: var(--md-sys-color-#{$key}-light);
   }
 }
 
 body.dark {
-  @each $key, $value in $dark-theme-variables {
-    --#{$key}: #{$value};
+  /* dark theme when body's class is set */
+  @each $key, $_value in $light-theme-variables {
+    --#{$key}: var(--#{$key}-dark);
   }
-  @each $key, $value in $global-variables {
-    --#{$key}: #{$value};
+  @each $key, $_value in $light-theme-md-variables {
+    --#{$key}: var(--md-sys-color-#{$key}-dark);
   }
 }
