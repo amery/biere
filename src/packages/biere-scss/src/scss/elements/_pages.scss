@@ -1,9 +1,24 @@
-.page,
-.modal:not(.active) .page.active,
-.page:not(.active) .page.active {
-  opacity: 0;
-  position: absolute;
-  display: none;
+/*
+ * hide inactive pages, and animate transitions
+ */
+@mixin page-transform-active-chunk($name, $dir, $opacity, $value) {
+  $v: if($value == 0, 0, $value * 4rem);
+
+  #{$name} {
+    opacity: $opacity;
+    transform: translate#{$dir }(#{$v});
+  }
+}
+
+@mixin page-transform-active($name-from, $name-to, $dir, $from) {
+  .page.#{$name-from}.active {
+    @keyframes page-to-#{$name-to} {
+      @include page-transform-active-chunk("from", $dir, 0, $from);
+      @include page-transform-active-chunk("to", $dir, 1, 0);
+    }
+
+    animation: var(--speed4) page-to-#{$name-to} ease;
+  }
 }
 
 .page.active {
@@ -12,66 +27,15 @@
   display: block;
 }
 
-.page.top.active {
-  animation: var(--speed4) page-to-bottom ease;
+.page,
+.modal:not(.active) .page.active,
+.page:not(.active) .page.active {
+  opacity: 0;
+  position: absolute;
+  display: none;
 }
 
-.page.bottom.active {
-  animation: var(--speed4) page-to-top ease;
-}
-
-.page.left.active {
-  animation: var(--speed4) page-to-right ease;
-}
-
-.page.right.active {
-  animation: var(--speed4) page-to-left ease;
-}
-
-@keyframes page-to-bottom {
-  from {
-    opacity: 0;
-    transform: translateY(-4rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes page-to-top {
-  from {
-    opacity: 0;
-    transform: translateY(4rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes page-to-left {
-  from {
-    opacity: 0;
-    transform: translateX(4rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes page-to-right {
-  from {
-    opacity: 0;
-    transform: translateX(-4rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+@include page-transform-active("top", "bottom", "Y", -1);
+@include page-transform-active("bottom", "top", "Y", 1);
+@include page-transform-active("right", "left", "X", 1);
+@include page-transform-active("left", "right", "X", -1);
