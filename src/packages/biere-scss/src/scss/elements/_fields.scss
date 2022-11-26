@@ -44,7 +44,7 @@
 }
 
 .field::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -117,19 +117,17 @@
 
 /* input, textarea and select */
 .field > select,
-input[type^=date],
-input[type^=time] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+input[type^="date"],
+input[type^="time"] {
   appearance: none;
   cursor: pointer;
 }
 
-input[type^=date]::-webkit-inner-spin-button,
-input[type^=date]::-webkit-calendar-picker-indicator,
-input[type^=time]::-webkit-inner-spin-button,
-input[type^=time]::-webkit-calendar-picker-indicator {
-  opacity: 0;   
+input[type^="date"]::-webkit-inner-spin-button,
+input[type^="date"]::-webkit-calendar-picker-indicator,
+input[type^="time"]::-webkit-inner-spin-button,
+input[type^="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -141,7 +139,7 @@ input[type^=time]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-input[type=file] {
+input[type="file"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -282,7 +280,7 @@ input[type=file] {
 }
 
 .field > :disabled {
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -413,7 +411,9 @@ input[type=file] {
 
 .field.label.border.round:not(.fill) > label.active,
 .field.label.border.round:not(.fill) > [placeholder]:focus ~ label,
-.field.label.border.round:not(.fill) > [placeholder]:not(:placeholder-shown) ~ label {
+.field.label.border.round:not(.fill)
+  > [placeholder]:not(:placeholder-shown)
+  ~ label {
   left: 24rem;
   z-index: 1;
 }
@@ -426,8 +426,8 @@ input[type=file] {
   color: var(--error) !important;
 }
 
-.field > label.required:after,
-.field.required > label:after {
+.field > label.required::after,
+.field.required > label::after {
   content: " * ";
 }
 

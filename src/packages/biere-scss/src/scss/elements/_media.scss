@@ -16,7 +16,8 @@ video.circle,
 video.responsive {
   object-fit: cover;
   object-position: center;
-  transition: var(--speed3) transform, var(--speed3) border-radius, var(--speed3) padding;
+  transition: var(--speed3) transform, var(--speed3) border-radius,
+    var(--speed3) padding;
   height: 48rem;
   width: 48rem;
 }
@@ -157,7 +158,7 @@ button > img.responsive,
   margin: 0 -8rem;
 }
 
-.button > img.responsive, 
+.button > img.responsive,
 button > img.responsive {
   margin-left: -24rem;
 }
