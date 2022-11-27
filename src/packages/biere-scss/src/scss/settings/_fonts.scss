@@ -4,9 +4,10 @@
 @if $use-self-hosted-fonts {
   @include Symbols.material-symbols-font("Material Symbols Outlined");
 
-  @each $x in (400, 500) {
+  @each $x in (300, 400, 500) {
     @include Roboto.fontFace($weight: $x, $fontDir: $roboto-font-path);
   }
 } @else {
+  // stylelint-disable-next-line
   @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&family=Roboto:wght@300;400;500&display=swap");
 }
