@@ -66,12 +66,16 @@ importers:
   src/packages/biere-scss:
     specifiers:
       '@biere/normalize-scss': ^7.0.1
+      '@fontsource/roboto': ^4.5.8
       beercss: ^2.3.0
+      material-symbols: ^0.4.0
       rollup-plugin-scss: ^4.0.0
       unbuild: ^1.0.1
     dependencies:
       '@biere/normalize-scss': 7.0.1
+      '@fontsource/roboto': 4.5.8
       beercss: 2.3.0
+      material-symbols: 0.4.0
     devDependencies:
       rollup-plugin-scss: 4.0.0
       unbuild: 1.0.1
@@ -1607,6 +1611,10 @@ packages:
   /@fal-works/esbuild-plugin-global-externals/2.1.2:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
     dev: true
+
+  /@fontsource/roboto/4.5.8:
+    resolution: {integrity: sha512-CnD7zLItIzt86q4Sj3kZUiLcBk1dSk81qcqgMGaZe7SQ1P8hFNxhMl5AZthK1zrDM5m74VVhaOpuMGIL4gagaA==}
+    dev: false
 
   /@humanwhocodes/config-array/0.11.7:
     resolution: {integrity: sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw==}
@@ -9394,6 +9402,10 @@ packages:
 
   /material-dynamic-colors/0.0.10:
     resolution: {integrity: sha512-UGgmkqcHfYxHeK4cuZMSw2Ymme4E+GO0jt+0CpQ8Chw+2Aad+n85l0+NK8xHKP4Fb9ATpDVWdCYMxsKngKtIoA==}
+    dev: false
+
+  /material-symbols/0.4.0:
+    resolution: {integrity: sha512-+pPDh/JHZvVtF4l+Jri3JAdUiwisTkFSuYiYjPhDpc+Ugpb1FMO8GygWY68u+XCtzPpr96DH3nxLuVeDDIYNrA==}
     dev: false
 
   /mathml-tag-names/2.1.3:

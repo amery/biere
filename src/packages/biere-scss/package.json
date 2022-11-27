@@ -22,6 +22,8 @@
   },
   "dependencies": {
     "@biere/normalize-scss": "^7.0.1",
-    "beercss": "^2.3.0"
+    "@fontsource/roboto": "^4.5.8",
+    "beercss": "^2.3.0",
+    "material-symbols": "^0.4.0"
   }
 }

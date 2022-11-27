@@ -1,0 +1,12 @@
+@use "@fontsource/roboto/scss/mixins" as Roboto;
+@use "material-symbols/core" as Symbols;
+
+@if $use-self-hosted-fonts {
+  @include Symbols.material-symbols-font("Material Symbols Outlined");
+
+  @each $x in (400, 500) {
+    @include Roboto.fontFace($weight: $x, $fontDir: $roboto-font-path);
+  }
+} @else {
+  @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&family=Roboto:wght@300;400;500&display=swap");
+}
