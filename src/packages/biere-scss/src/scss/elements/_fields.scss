@@ -119,6 +119,8 @@
 .field > select,
 input[type^="date"],
 input[type^="time"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
 }
