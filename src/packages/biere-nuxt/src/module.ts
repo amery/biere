@@ -24,5 +24,11 @@ export default defineNuxtModule<BiereOptions>({
 			nuxt.options.build.transpile.push(runtimeDir);
 			addPlugin(resolve(runtimeDir, "plugin"));
 		}
+
+		if (!nuxt.options.css || nuxt.options.css.length == 0) {
+			nuxt.options.css = [
+				"@biere/scss/src/scss/biere.scss",
+			]
+		}
 	},
 });
