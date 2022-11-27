@@ -1,9 +1,5 @@
-html {
-  font-size: var(--size);
-}
-
 body {
-  font-size: 14rem;
+  font-size: 14px;
 }
 
 h1,
@@ -15,7 +11,7 @@ h6 {
   font-weight: 400;
   display: flex;
   align-items: center;
-  margin-bottom: 8rem;
+  margin-bottom: 0.5rem;
 }
 
 * + h1,
@@ -24,31 +20,31 @@ h6 {
 * + h4,
 * + h5,
 * + h6 {
-  margin-top: 16rem;
+  margin-top: 1rem;
 }
 
 h1 {
-  font-size: 96rem;
+  font-size: 6rem;
 }
 
 h2 {
-  font-size: 60rem;
+  font-size: 3.75rem;
 }
 
 h3 {
-  font-size: 48rem;
+  font-size: 3rem;
 }
 
 h4 {
-  font-size: 34rem;
+  font-size: 2.125rem;
 }
 
 h5 {
-  font-size: 24rem;
+  font-size: 1.5rem;
 }
 
 h6 {
-  font-size: 20rem;
+  font-size: 1.25rem;
 }
 
 .link {
@@ -66,15 +62,15 @@ h6 {
 }
 
 .small-text {
-  font-size: 12rem;
+  font-size: 0.75rem;
 }
 
 .medium-text {
-  font-size: 14rem;
+  font-size: 0.875rem;
 }
 
 .large-text {
-  font-size: 16rem;
+  font-size: 1rem;
 }
 
 .upper {
@@ -106,5 +102,5 @@ h6 {
 }
 
 p {
-  margin: 8rem 0;
+  margin: 0.5rem 0;
 }
