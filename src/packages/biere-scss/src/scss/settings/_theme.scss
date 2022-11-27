@@ -73,45 +73,74 @@ $dark-theme-md-variables: (
 );
 
 /*! beercss | MIT License | beercss.com */
-:root {
-  /*! global variables */
-  @each $key, $value in $global-variables {
-    --#{$key}: #{$value};
+@if $use-md-variables {
+  // use intermediate --md-sys-color-* variables for compatibility with
+  // @material/material-color-utilities's applyTheme()
+  :root {
+    /* theme independent variables */
+    @each $key, $value in $global-variables {
+      --#{$key}: #{$value};
+    }
+
+    /* light theme variables */
+    @each $key, $value in $light-theme-md-variables {
+      --md-sys-color-#{$key}-light: #{$value};
+    }
+    @each $key, $value in $light-theme-variables {
+      --#{$key}-light: #{$value};
+    }
+
+    /* dark theme variables */
+    @each $key, $value in $dark-theme-md-variables {
+      --md-sys-color-#{$key}-dark: #{$value};
+    }
+    @each $key, $value in $dark-theme-variables {
+      --#{$key}-dark: #{$value};
+    }
   }
 
-  /*! light theme variables */
-  @each $key, $value in $light-theme-variables {
-    --#{$key}-light: #{$value};
-  }
-  @each $key, $value in $light-theme-md-variables {
-    --md-sys-color-#{$key}-light: #{$value};
+  body {
+    /* light theme by default */
+    @each $key, $_value in $light-theme-md-variables {
+      --#{$key}: var(--md-sys-color-#{$key}-light);
+    }
+    @each $key, $_value in $light-theme-variables {
+      --#{$key}: var(--#{$key}-light);
+    }
   }
 
-  /*! dark theme variables */
-  @each $key, $value in $dark-theme-variables {
-    --#{$key}-dark: #{$value};
+  body.dark {
+    /* dark theme when body's class is set */
+    @each $key, $_value in $dark-theme-md-variables {
+      --#{$key}: var(--md-sys-color-#{$key}-dark);
+    }
+    @each $key, $_value in $dark-theme-variables {
+      --#{$key}: var(--#{$key}-dark);
+    }
   }
-  @each $key, $value in $dark-theme-md-variables {
-    --md-sys-color-#{$key}-dark: #{$value};
+} @else {
+  // immediate values
+  :root {
+    @each $key, $value in $global-variables {
+      --#{$key}: #{$value};
+    }
   }
-}
 
-body {
-  /*! light theme by default */
-  @each $key, $_value in $light-theme-variables {
-    --#{$key}: var(--#{$key}-light);
+  body {
+    @each $key, $value in $light-theme-md-variables {
+      --#{$key}: #{$value};
+    }
+    @each $key, $value in $light-theme-variables {
+      --#{$key}: #{$value};
+    }
   }
-  @each $key, $_value in $light-theme-md-variables {
-    --#{$key}: var(--md-sys-color-#{$key}-light);
-  }
-}
 
-body.dark {
-  /* dark theme when body's class is set */
-  @each $key, $_value in $light-theme-variables {
-    --#{$key}: var(--#{$key}-dark);
-  }
-  @each $key, $_value in $light-theme-md-variables {
-    --#{$key}: var(--md-sys-color-#{$key}-dark);
+  body.dark {
+    @each $key, $value in $dark-theme-md-variables {
+      --#{$key}: #{$value};
+    }
+    @each $key, $value in $dark-theme-variables {
+      --#{$key}: #{$value};
+    }
   }
 }

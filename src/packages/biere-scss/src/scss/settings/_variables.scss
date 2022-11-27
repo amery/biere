@@ -37,6 +37,10 @@ $indent-amount: 40px !default;
 // $normalize-vertical-rhythm to be automatically set to true.
 $normalize-vertical-rhythm: false !default;
 
+// use --md-sys-color-(-{dark,light} variables to be replaced by
+// @material/material-color-utilities's applyTheme()
+$use-md-variables: false !default;
+
 // containers elevation
 $elevate1: 0 0.125rem 0.125rem 0 rgb(0 0 0 / 14%),
   0 0.0625rem 0.3125rem 0 rgb(0 0 0 / 12%),
