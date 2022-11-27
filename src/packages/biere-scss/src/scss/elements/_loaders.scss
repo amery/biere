@@ -1,5 +1,5 @@
 .loader {
-  --loader-translateY: 0;
+  --loader-translate-y: 0;
 
   display: inline-block;
   width: 2.5rem;
@@ -118,12 +118,12 @@
 }
 
 .field > .loader {
-  --loader-translateY: -50%;
+  --loader-translate-y: -50%;
 }
 
 @keyframes to-loader {
   0% {
-    transform: translateY(var(--loader-translateY)) rotate(0deg);
+    transform: translateY(var(--loader-translate-y)) rotate(0deg);
     clip-path: polygon(
       50% 50%,
       0% 0%,
@@ -236,7 +236,7 @@
   }
 
   90% {
-    transform: translateY(var(--loader-translateY)) rotate(360deg);
+    transform: translateY(var(--loader-translate-y)) rotate(360deg);
     clip-path: polygon(
       50% 50%,
       0% 50%,
